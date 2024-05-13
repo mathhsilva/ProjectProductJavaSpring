@@ -25,7 +25,6 @@ public class ProductController {
         return ResponseEntity.ok(savedProducts);
     }
 
-
     @PostMapping("/sell")
     public ResponseEntity<String> sellProduct(@RequestBody ProductSale productSale) {
         return productService.sellProduct(productSale);
@@ -51,15 +50,12 @@ public class ProductController {
         if (bindingResult.hasErrors()) {
             return ResponseEntity.badRequest().body(bindingResult.getAllErrors());
         }
-
         try {
             return ResponseEntity.ok(productService.updateQuantity(request.getProductId(), request.getQuantity()));
         } catch (RuntimeException e) {
             return ResponseEntity.notFound().build();
         }
     }
-
-
 
     @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteById(@PathVariable("id") Integer id) {
@@ -70,5 +66,4 @@ public class ProductController {
             return responseEntity; // Retorna o status de erro do serviço
         }
     }
-
 }
