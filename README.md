@@ -40,7 +40,8 @@ Product App é uma aplicação de gerenciamento de produtos desenvolvida em Spri
 O aplicativo estará acessível em http://localhost:8080
 
 ## Como Usar
-Para utilizar este projeto, você pode testar os endpoints utilizando ferramentas como Insomnia ou Postman.
+- Para utilizar este projeto, você pode testar os endpoints utilizando ferramentas como Insomnia ou Postman.
+- Após executar o aplicativo, os produtos serão iniciados automaticamente devido à configuração feita na classe `ProductConfig`. Esta classe está anotada com `@Profile("test")`, o que significa que será ativada apenas no perfil de teste. Ela contém um bean que cria uma lista de produtos e os salva na base de dados. Os produtos serão utilizados para teste e demonstração da aplicação.
 
 ## Exemplos de Endpoints
 - <span style="color:red">Criação de Produto</span>
