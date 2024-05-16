@@ -26,7 +26,7 @@ Product App é uma aplicação de gerenciamento de produtos desenvolvida em Spri
 ## Como Configurar e Executar
 
 1. Clone o repositório:
-   git clone https://github.com/seu-usuario/product-app.git
+   git clone https://github.com/mathhsilva/ProjectProductJavaSpring.git
 
 2. Navegue até o diretório do projeto:
    cd product-app
